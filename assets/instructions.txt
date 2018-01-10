@@ -1,0 +1,2 @@
+poll.in aggregates polls and predicts races based on polling, historical partisan +/-, 
+economic conditions and candidate popularity.
