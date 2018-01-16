@@ -1,3 +1,5 @@
+#!C:\ProgramData\Python3\python.exe
+
 import tkinter as tk
 import math
 import os
@@ -30,7 +32,7 @@ def welcome():
         displayed_text.insert(1.0,instructions)
         displayed_text.grid(column = 4, row = 1 , rowspan = 5 , sticky='we' )
         displayed_text['state'] = 'disabled'
-        
+
     def show_credits():
         displayed_text = tk.Text(frame, fg = 'black',bg = secondary_background_colour,state = "normal")
         Game_Credits = open('C:/Users/Ben/Documents/#####pollng-master/project/assets/credits.txt')
@@ -39,14 +41,14 @@ def welcome():
         displayed_text.insert(1.0,game_credits)
         displayed_text.grid(column = 4, row = 1 , rowspan = 5 , sticky='we' )
         displayed_text['state'] = 'disabled'
-        
+
     global mode
     mode = ''   #this prevents an error if the window is closed manually
     root = tk.Tk()
-    
+
     main_background_colour = '#8e8e8e'
     secondary_background_colour = '#ffffff'
-    
+
     root.title("Polling Aggregator - 0.1.1")
     root.configure(background=main_background_colour)
     frame = tk.Frame(root, bg=main_background_colour)
@@ -61,7 +63,7 @@ def welcome():
     tk.Button(frame, text="Instructions", command=instructions, bg = secondary_background_colour).grid(column=1, row=4,sticky= "we")
     tk.Button(frame, text="Credits", command=show_credits, bg = secondary_background_colour).grid(column=2, row=4, sticky= "we")
     for child in frame.winfo_children(): child.grid_configure(padx=5, pady=5)   #space everything out
-    
+
     root.mainloop()
     del frame
     Mode = mode     #store the value of the global variable in a local variable
