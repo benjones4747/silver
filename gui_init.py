@@ -3,6 +3,7 @@
 import tkinter as tk
 import math
 import os
+import sys
 cwd = os.getcwd()
 print(cwd)
 
@@ -35,7 +36,7 @@ def welcome():
 
     def show_credits():
         displayed_text = tk.Text(frame, fg = 'black',bg = secondary_background_colour,state = "normal")
-        Game_Credits = open('C:/Users/Ben/Documents/#####pollng-master/project/assets/credits.txt')
+        Game_Credits = open('C:/Users/Ben/Documents/GitHub/pollng/assets/credits.txt')
         game_credits = Game_Credits.read()  #'credits' is a built in python function so game_credits had to be used instead
         Game_Credits.close()
         displayed_text.insert(1.0,game_credits)
