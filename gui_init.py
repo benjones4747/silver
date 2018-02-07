@@ -39,7 +39,8 @@ def welcome():
         Game_Credits = open('C:/Users/Ben/Documents/GitHub/pollng/assets/credits.txt')
         game_credits = Game_Credits.read()  #'credits' is a built in python function so game_credits had to be used instead
         Game_Credits.close()
-        displayed_text.insert(1.0,game_credits)
+        displayed_text.in
+        sert(1.0,game_credits)
         displayed_text.grid(column = 4, row = 1 , rowspan = 5 , sticky='we' )
         displayed_text['state'] = 'disabled'
 
@@ -67,7 +68,7 @@ def welcome():
 
     root.mainloop()
     del frame
-    Mode = mode     #store the value of the global variable in a local variable
+    _mode = mode     #store the value of the global variable in a local variable
     del mode    #delete the global variable
     return Mode     #return the local variable
 

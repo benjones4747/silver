@@ -1,4 +1,3 @@
-# poll.in
-polling aggregator and predictor with regards to pollster rating
-
-uses fivethirtyeight.com pollster ratings
+# pollng
+scraper, aggregator and modeller of american elections (house, senate, presidential and gubernatorial)
+uses fivethirtyeight.com pollster rankings & ratings
