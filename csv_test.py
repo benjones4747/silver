@@ -1,15 +1,22 @@
 import csv
+import os
 
-with open('lib\pollster-ratings.csv') as csvfile:
-    readCSV = csv.reader(csvfile, delimiter = ',')
-    names = []
-    ppms = []
-    for row in readCSV:
-        name = row[1]
-        ppm = row[10]
+os.getcwd()
 
-        names.append(name)
-        ppms.append(ppm)
 
-    print(names)
-    print(ppms)
+
+def ppmprocess(ppm):
+    ppmprocessed = 10 - (((ppm)+1.4)*(10/4.2))
+    return ppmprocessed
+
+with open( ' lib\pollster-ratings.csv ' ) as csvfile:
+    reader = csv.reader ( csvfile, delimiter = ' , ' )
+    for row in reader:
+        weightdesc = "Pollster Weighting"
+        if row[ 0 ] == "Pollster":
+            row.append(weightdesc)
+        else:
+            predictiveplusminus = row [ 7 ]
+            weight = ppmprocess(predictiveplusminus)
+            row.append(weight)
+print("done")
