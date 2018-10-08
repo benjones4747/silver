@@ -1,3 +1,0 @@
-poll.in uses fivethirtyeight.com rankings and ratings of pollsters to apply 
-weight to their poll results and semi-accurately predict the outcome of a 
-race.

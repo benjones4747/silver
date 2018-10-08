@@ -39,7 +39,6 @@ def welcome():
         Game_Credits = open('C:/Users/Ben/Documents/GitHub/pollng/assets/credits.txt')
         game_credits = Game_Credits.read()  #'credits' is a built in python function so game_credits had to be used instead
         Game_Credits.close()
-        displayed_text.in
         sert(1.0,game_credits)
         displayed_text.grid(column = 4, row = 1 , rowspan = 5 , sticky='we' )
         displayed_text['state'] = 'disabled'
