@@ -1,0 +1,80 @@
+# by ben with <3
+import pandas as pd
+import math as m
+from datetime import datetime as d
+import numpy as np
+
+#imports votes csv as 'vt'
+vt = pd.read_csv( 'C:\\Users\\Ben\\Documents\\GitHub\\pollng\\lib\\votes.csv', delimiter = ',')
+
+
+# creates dictionary of state abbreviations for vote results
+
+states = {
+        'AK': [],
+        'AL': [],
+        'AR': [],
+        'AZ': [],
+        'CA': [],
+        'CO': [],
+        'CT': [],
+        'DC': [],
+        'DE': [],
+        'FL': [],
+        'GA': [],
+        'HI': [],
+        'IA': [],
+        'ID': [],
+        'IL': [],
+        'IN': [],
+        'KS': [],
+        'KY': [],
+        'LA': [],
+        'MA': [],
+        'MD': [],
+        'ME': [],
+        'MI': [],
+        'MN': [],
+        'MO': [],
+        'MS': [],
+        'MT': [],
+        'NC': [],
+        'ND': [],
+        'NE': [],
+        'NH': [],
+        'NJ': [],
+        'NM': [],
+        'NV': [],
+        'NY': [],
+        'OH': [],
+        'OK': [],
+        'OR': [],
+        'PA': [],
+        'RI': [],
+        'SC': [],
+        'SD': [],
+        'TN': [],
+        'TX': [],
+        'UT': [],
+        'US': [],
+        'VA': [],
+        'VT': [],
+        'WA': [],
+        'WI': [],
+        'WV': [],
+        'WY': []
+}
+
+# for each item in {states}, iterate through each row of the county vote, and add each county with attributes
+
+def arrayify(vt, states):
+    vt = vt.to_dict(orient = 'index')
+    for key in states:
+        for x in vt.values():
+            if x['state_abbr'] == key:
+                states[key].append(x)
+    return states
+arrayify(vt, states)
+print(states)
+
+votes_states = states
